@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500&family=Grandstander:wght@500&display=swap");
+body {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  max-width: 400px;
+  margin: 2em auto 2em auto;
+  background-color: rgba(49, 40, 40, 0.041);
+  padding: 2em;
+  border-radius: 5%;
+}
+
+header {
+  margin-bottom: 2%;
+  background-color: #4534e0;
+  color: white;
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  z-index: 999999;
+  font-family: "Grandstander", cursive;
+  top: 35%;
+  right: 35%;
+  font-family: "Grandstander", cursive;
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: xx-large;
+  }
+}
+
+h2 {
+  color: white;
+  background-color: #4534e0;
+}
+
+.active {
+  border-bottom: 1px solid #4534e0;
+  border-top: 1px solid #4534e0;
+  zoom: 100% !important;
+  color: #4534e0 !important;
+  font-size: xx-large !important;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.medal {
+  width: 20%;
+  right: 0;
+  top: 0;
+}
+
+.text-prim {
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.separator {
+  border: 5px solid silver;
+}
+
+ul {
+  align-items: center;
+}
+ul li a {
+  color: #4534e0;
+}
+ul li a:hover {
+  color: #4534e0;
+}
+
+section div div:first {
+  padding-top: 1%;
+  border-top: 5px solid #4534e0;
+  border-bottom: 5px solid #4534e0;
+}
+
+footer {
+  width: 100%;
+}
+
+svg {
+  width: 100%;
+  background-color: white;
+}
+
+/*# sourceMappingURL=app.css.map */

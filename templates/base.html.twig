@@ -2,18 +2,38 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Hold Your Olds{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="">
+        
+        <header class="text-center mb-3">   
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#4534e0" fill-opacity="1" d="M0,256L120,261.3C240,267,480,277,720,245.3C960,213,1200,139,1320,101.3L1440,64L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+            </svg>
+
+            <h1>Hold Your Olds</h1>
+            {# &#128116 icon oldguy #}
+
+        </header>
+
         {% block body %}{% endblock %}
+
+        <footer>
+            <svg viewBox="0 0 860 265" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M269 113C128 128 191.274 -11.9534 0 15V265H860V7.62939e-06C860 7.62939e-06 812 74 709 98C606 122 465 15 425 28C385 41 410 98 269 113Z" fill="#4534E0"/>
+            </svg>
+        </footer>
+
     </body>
 </html>

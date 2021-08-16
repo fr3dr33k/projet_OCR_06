@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-4 mb-3">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active disabled" aria-current="page" href="/">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Nos services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tarifs">Nos Tarifs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Nous contacter</a>
+            </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="m-2 m-md-5">
+    <div class="row align-items-center">
+
+        {# <h2 class="text-prim text-center fs-4 mb-5">Nous accompagnons toutes les personnes vulnérable, dépassées, rincées à accomplir leurs tâches sur internet, prise de rdv etc... </h2> #}
+
+        <div class="col-12 col-md-6 mx-auto mb-5">
+            <h3 class="text-center py-2">- Proche de vous, à l'écoute..</h3>
+            <div class="position-relative">
+                <img class="helpOldImage img-fluid p-3" src="images/helpOld.jpg" alt="">
+                <img class="position-absolute medal" src="images/medal.png" alt="">
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere illum inventore quae facilis illo quidem praesentium quasi ea, atque dolor ad temporibus omnis sequi doloribus ipsam laboriosam in tempore totam?
+                Illum voluptatibus odio consectetur omnis voluptatum harum fugiat id reprehenderit, deserunt dignissimos et, incidunt quis quas ut atque quo quam? Deserunt, iure numquam ipsa illum praesentium vel labore repudiandae delectus.
+                Porro cupiditate ducimus eaque nam? Quisquam rem eveniet dolor possimus voluptates architecto. Maiores, adipisci. Assumenda unde ipsam repellat inventore sit autem quidem aspernatur odio est natus maxime excepturi, debitis similique?
+                Fuga placeat molestias, aperiam tempora quasi enim exercitationem reprehenderit eligendi saepe quod incidunt perspiciatis rem eveniet ipsa doloremque aut accusamus autem cumque, minus vitae nihil? Corporis optio perferendis necessitatibus laborum.
+                Rerum explicabo fugit totam amet esse vel. Ratione libero hic laboriosam recusandae molestiae quo, est quod autem dolor reprehenderit facere doloremque tenetur corrupti, quisquam quaerat? Sed excepturi hic repudiandae. Atque.
+                Amet, voluptas ut quod harum asperiores laboriosam nulla voluptatum vel explicabo mollitia facilis nobis nam veritatis eius fugiat autem. Expedita fugiat nostrum numquam! Nesciunt cumque odit suscipit officia saepe soluta.
+                Facilis veniam ipsum officia saepe sit! Praesentium atque voluptatem iste, tempora eveniet nostrum exercitationem, similique qui facere non, quibusdam animi omnis repellendus placeat quasi. Delectus ipsum suscipit dolorem quae doloribus?
+            </p>
+        </div>
+    </div>
+    <hr class="m-5 text-primary fs-1">
+    <div class="row align-items-center justify-content-center my-5 my-md-3">
+        <div class="col-12 col-md-7">
+            <h3>- Spécialisés dans la technologie nous apportons un soutiens, une aide, au novice du domaine pour toutes tâches.</h3>
+            <img class="img-fluid p-5" src="images/vieille.jpg" alt="">
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae blanditiis cum eaque eligendi, enim expedita illo illum iure nesciunt nobis officiis omnis, perferendis quod quos sunt ullam ut voluptates?</span><span>Cupiditate dignissimos distinctio dolores facilis libero molestiae necessitatibus, neque numquam obcaecati perferendis quas quidem repellendus sed sint tempore vero voluptate. Accusamus accusantium assumenda esse itaque mollitia provident soluta suscipit vero!</span></p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
