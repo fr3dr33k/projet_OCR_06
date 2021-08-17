@@ -4,6 +4,10 @@ namespace App\Controller;
 use App\Entity\UserMessage;
 use App\Form\UserMessageType;
 
+use ReCaptcha\ReCaptcha;
+
+use Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3Validator;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,9 +35,11 @@ class HomeController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function contact(Request $request): Response
+    public function contact(Request $request, Recaptcha3Validator $recaptcha3Validator): Response
     {
 
+        $secret = "6Le6yv4ZAAAAAFIvCbbCBPdeRfk5DLIYnDrpuQo0";
+        $recaptchaGoogle = new ReCaptcha($secret);
 
         $userMess = new UserMessage();
         
@@ -43,18 +49,31 @@ class HomeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             // $form->getData() holds the submitted values
             // but, the original `$task` variable has also been updated
-            
-            $task = $form->getData();
-            
-            $task->setDateTime(new \DateTime('now'));
 
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($task);
-            $entityManager->flush();
+            $score = $recaptcha3Validator->getLastResponse()->getScore();
 
-            return $this->redirectToRoute('home');
+            if ($score <= 0.3) {
+                $this->addFlash("error","Désolé problème");
+                return $this->render('contact/index.html.twig', [
+                    'form' => $form->createView(),
+                ]);
+            } else {
+
+                $this->addFlash("success","OK c'est fait");
+
+                $task = $form->getData();
+
+                $task->setDateTime(new \DateTime('now'));
+
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($task);
+                $entityManager->flush();
+
+                return $this->redirectToRoute('home');
+            }
+
+
         }
-
         return $this->render('contact/index.html.twig', [
             'form' => $form->createView(),
         ]);

@@ -58,13 +58,26 @@ h2 {
     right: 0;
     top: 0;
 }
-
+h3 {
+    background-color: #4534e0;
+    color: white;
+    padding: 1em;
+    border-radius: 5% 1em;
+}
 .text-prim{
     font-family: 'Archivo Narrow', sans-serif;
 }
 
 .separator {
     border: 5px solid silver;
+}
+
+footer {
+    margin-top: 5em;
+    background-color: #4534e0;
+    #fb-icon {
+        width: 50px;
+    }
 }
 
 ul {

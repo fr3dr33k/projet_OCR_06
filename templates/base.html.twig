@@ -27,12 +27,59 @@
 
         </header>
 
-        {% block body %}{% endblock %}
 
-        <footer>
-            <svg viewBox="0 0 860 265" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M269 113C128 128 191.274 -11.9534 0 15V265H860V7.62939e-06C860 7.62939e-06 812 74 709 98C606 122 465 15 425 28C385 41 410 98 269 113Z" fill="#4534E0"/>
-            </svg>
+
+        {% block body %}
+
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
+        {% endblock %}
+
+        <footer class="p-5">
+            <div class="container text-light py-5 text-center">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <h4 class="mt-5">Nos services</h4>
+                        <hr>
+                        <ul class="list-unstyled">
+                            <li class="m-2">lorem</li>
+                            <li class="m-2">ipsum</li>
+                            <li class="m-2">merguez</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <h4 class="mt-5">Contact</h4>
+                        <hr>
+                        <ul class="list-unstyled">
+                            <li class="m-2">Email : <a href="mailto: abc@example.com" class="text-light">holdyourolds.contact@hotmail.fr</a></li>
+                            <li class="m-2">Téléphone : <a href="tel:+33500000000" class="text-light">tel:+33500000000</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <h4 class="mt-5">Adresse</h4>
+                        <hr>
+                        <ul class="list-unstyled">
+                            <li class="m-2">6 rue Montflez</li>
+                            <li class="m-2">89600</li>
+                            <li class="m-2">NOUILLORC CITY</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 align-items-center align-content-center my-3">
+                        <h4 class="m-3">- Suivez-nous sur les réseaux -</h4>
+                        <a href="https://www.facebook.com" class="text-light p-2 my-2"><i class="fab fa-facebook fs-2"></i></a>
+                        <a href="https://www.instagram.com" class="text-light p-2 my-2"><i class="fab fa-instagram fs-2"></i></a>
+                    </div>
+                </div>
+                <p class="mt-5">
+                    Copyright {{ 'now' | date('Y') }}
+                </p>
+            </div>
         </footer>
 
     </body>
